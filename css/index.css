@@ -1,6 +1,3 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
-
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -65,307 +62,150 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
-/* This is my code */
-/*-----------------*/
-/*   Font Styles   */
+
+/* Your code starts here! */
+
+/*FONT STYLES*/
 h1 {
-		font-size: 4.75em;
-		margin-bottom: .25em;
-		text-align: center;
-	}
-
-h2 {
-		font-size: 1.3em;
-		font-weight: bold;
-		margin-bottom: 1em;
-	}
-
-p {
-		font-family: Helvetica;
-		font-size: .8em;
-		padding-bottom: 10px;
-		line-height: 1.25em;
-	}
-
-a {
-		text-decoration: none;
-	}
-
-/* Start Content Styles */
-/*
-
-OLD NAVIGATION. GOING TO RESTYLE TO FIT THE DESIGN FILE.
-
-nav {
-	display: flex;
-	background-color: #bababa;
-	padding: 0 40px 0 25px;
-	align-items: center;
-	height: 80px;
-	position: fixed;
-	overflow: hidden;
-	width: 100%;
-
+  font-size: 4em;
 }
-	nav .navLink {
-		display: flex;
-		align-items: center;
-		height: 80px;
-		padding: 0 25px;
-		color: white;
-		text-decoration: none;
-		transition: background-color .3s ease;
-	}
-
-	nav .navLink:hover{
-		background-color: #829fcf;
-	}
-
-	nav .navLogo{
-		margin-left: auto;
-	}
-
-		nav .navLogo img{
-			width: 100%;
-		}
-
-		@media screen and (max-width:800px) {
-			.navLogo {
-				display: none;
-			}
-		} */
-
+h2 {
+  font-size: 1em;
+}
+p {
+  font-size: 1em;
+  line-height: 1.25em;
+}
 
 header{
-	display: flex;
-	padding-top: 80px;
-	min-height: 500px;
-	max-width: 876px;
-	margin: 0 auto;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	border-bottom: 1px solid black;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-	.headerLeft{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		margin-left: 10px;
-	}
+  nav{
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-	button{
-		width: 180px;
-		height: 35px;
-		margin: 0 auto;
-		background-color: white;
-		border: 1px solid black;
-		font-size: 1em;
-		font-family: 'Titillium Web', sans-serif;
-		transition: background-color 0.3s ease;
-	}
+    #navLinks{
+      display: flex;
+      width:73%;
+      min-height: 80px;
+      margin-left: 2%;
+      justify-content: flex-start;
+      flex-flow: row no-wrap;
 
-		button:hover{
-			cursor: pointer;
-			background-color: #bababa;
-			border: 1px solid #bababa;
-		}
 
-		button:active{
-			background-color: #1c1c1c;
-			color: white;
-		}
+    }
+      .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:12%;
+        color: grey;
+        text-decoration: none;
+      }
 
-	.headerRight{
-		display: flex;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		margin: 0 10px 0 40px;
-	}
-
-		.headerRight img{
-			max-width: 100%;
-			margin: 50px;
-		}
+    #navLogoContainer{
+      display: flex;
+      margin: 0 2% 0 auto;
+      justify-content: flex-end;
+      width: 23%;
+    }
+      .navLogo{
+        display: flex;
+        margin: 0 2% 0 auto;
+        padding: 0;
+      }
 
     @media (max-width:800px){
-      .headerRight{
-        display:none;
+      nav{
+        width: 100%;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-flow: column-reverse;
+       }
+
+        #navLinks{
+          width: 100%;
+          margin-left: 0;
+
+        }
+          .navigation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 16%;
+            color: black;
+          }
+
+        #navLogoContainer{
+          width: 100%;
+          margin: 0;
+          justify-content: flex-start;
+        }
+          .navLogo{
+            margin: 0 auto;
+            padding: 20px;
+          }
       }
+
+  #headerBanner{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    max-height: 380px;
+  }
+    .headerBannerLeft{
+      display: flex;
+      flex-flow: column;
+      width: 48%;
+      margin: 2%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-	.servicesHeader{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 90px 10px 10px 10px;
-		max-width: 856px;
-		margin: 0 auto;
-		border-bottom: 1px solid black;
-	}
-		.services-header-img{
-			padding-bottom: 20px;
-			object-fit: cover;
-		}
+    .headerBannerRight{
+      width: 48%;
+      display: flex;
+      align-items: center;
+    }
+      .headerBannerRight img{
+        width: 80%;
+        margin: 5% auto;
+        max-width: 380px;
+      }
 
-	.contentTop {
-			display: flex;
-			max-width: 876px;
-			margin: 0 auto;
-			padding: 35px 5px;
-		}
+  button{
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    background: white;
+  }
 
-			.twoCol{
-				padding: 5px;
-				display: flex;
-				flex-wrap: wrap;
-			}
+  @media (max-width:800px) {
 
-		.oneCol{
-			display: flex;
-			justify-content: center;
-		}
+    .headerBannerRight{
+      display: none;
+    }
 
-			.middle-img{
-				padding-bottom: 35px;
-			}
+    .headerBannerLeft{
+      width: 98%;
+    }
+  }
 
-	.contentBottom{
-			display: flex;
-			max-width: 876px;
-			margin: 0 auto;
-			border-bottom: 1px solid black;
-		}
-
-			.threeCol{
-				padding: 5px;
-				margin-bottom: 35px;
-			}
-
-	.contact{
-		display: flex;
-		max-width: 876px;
-		margin: 0 auto;
-		margin-top: 35px;
-		flex-direction: column;
-		line-height: 1.2meem;
-		padding: 0 5px;
-	}
-
-	.services{
-		display: flex;
-		max-width: 876px;
-		flex-flow: row wrap;
-		justify-content: center;
-		margin: 35px auto;
-	}
-
-	.services > div{
-		flex-basis: 320px;
-		flex-grow: 1;
-		border: 1px solid black;
-		background-color: #f2f1f2;
-		margin: 10px;
-		padding: 20px;
-	}
-		.servicesItem button{
-			border-radius: 5px;
-			width: 150px;
-			font-size: .7em;
-		}
-
-	.businessFacts {
-		display: flex;
-		max-width: 876px;
-		flex-flow: row wrap;
-		justify-content: center;
-		margin: 35px auto;
-		border-top: 2px solid  black;
-	}
-		.businessFacts > section {
-			display: flex;
-			flex-flow: column nowrap;
-			flex-basis: 320px;
-			flex-grow: 1;
-			margin-top: 35px;
-			padding: 10px;
-		}
-
-		.businessFacts ul li {
-			list-style: square;
-			margin-left: 20px;
-			line-height: 2em;
-		}
-
-		.services-info-img {
-			flex-grow: 1;
-			flex-basis: 320px;
-			object-fit: cover;
-		}
-
-		/* Leadership Styles */
-
-		.aboutHeader {
-			background: url('../img/aboutHeader.jpg');
-			display: flex;
-			padding-top: 80px;
-			height: 500px;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-		}
-			.aboutHeader h1 {
-				color: white;
-				font-size: 6em;
-			}
-
-		.leadershipTeam {
-			display: flex;
-			flex-flow: row wrap;
-			margin: 20px auto;
-
-		}
-
-		.leader {
-			display: flex;
-			flex-flow: column wrap;
-			flex-grow: 1;
-			flex-basis: 300px;
-			align-items: center;
-			justify-content: space-between;
-			border-bottom: 1px solid black;
-			margin: 10px;
-
-		}
-
-		.leaderImage {
-			display: flex;
-			flex-basis: 250px;
-			max-width: 300px;
-			flex-grow: 1;
-			margin: 10px;
-		}
-
-		h1.leaderName {
-			font-size: 1.75em;
-			line-height: 1.5em;
-
-		}
-
-		h2.leaderTitle {
-			font-size: 1.25em;
-			font-family: Helvetica;
-		}
-
-		/* End Leadership Styles */
-
-
-
-	footer{
-		max-width: 876px;
-		margin: 40px auto;
-		text-align: center;
-	}
+#content{
+  max-width: 90%;
+  margin: 0 auto;
+}
