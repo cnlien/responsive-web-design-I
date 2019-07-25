@@ -99,8 +99,6 @@ header{
       margin-left: 2%;
       justify-content: flex-start;
       flex-flow: row no-wrap;
-
-
     }
       .navigation {
         display: flex;
@@ -110,6 +108,10 @@ header{
         color: grey;
         text-decoration: none;
       }
+
+			.navigation:hover{
+				text-decoration: underline;
+			}
 
     #navLogoContainer{
       display: flex;
@@ -141,7 +143,7 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 16%;
+            width: 100%;
             color: black;
           }
 
@@ -155,6 +157,27 @@ header{
             padding: 20px;
           }
       }
+
+			@media (max-width:500px){
+
+				#navLinks{
+					display: flex;
+					flex-direction: column;
+				}
+				.navigation{
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					border-bottom: 1px solid grey;
+					height: 60px;
+					font-size: 1.25em;
+					font-weight: bold;
+					color: grey;
+				}
+				.navLogoContainer{
+					border-bottom: 1px solid grey;
+				}
+			}
 
   #headerBanner{
     width: 90%;
@@ -192,7 +215,18 @@ header{
     height: 30px;
     border: 1px solid black;
     background: white;
+		font-size: .8em;
   }
+
+		button:hover{
+			background: lightgrey;
+			cursor: pointer;
+		}
+
+		button:active{
+			background: grey;
+			border: 1px solid lightgrey;
+		}
 
   @media (max-width:800px) {
 
@@ -208,4 +242,56 @@ header{
 #content{
   max-width: 90%;
   margin: 0 auto;
+	border-bottom: 2px solid black;
 }
+	.twoCol{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	.twoCol > section {
+		margin-bottom: 20px;
+		padding: 0 10px;
+	}
+
+
+
+	.middle-img{
+		width: 100%;
+		height: auto;
+		padding: 0 10px;
+		margin-bottom: 20px;
+	}
+
+	.threeCol{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	.threeCol > section {
+		margin-bottom: 20px;
+		padding: 0 10px;
+	}
+
+	@media (max-width:500px){
+		.twoCol {
+			flex-direction: column;
+		}
+		.threeCol{
+			flex-direction: column;
+		}
+	}
+
+footer{
+	width: 90%;
+	margin: 20px auto;
+	display: flex;
+	flex-flow: column nowrap;
+}
+	footer .contact{
+		margin-bottom: 20px;
+	}
+
+	footer .copyrightInfo{
+		text-align: center;
+	}
