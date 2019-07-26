@@ -72,6 +72,9 @@ h1 {
 h2 {
   font-size: 1em;
 }
+h3 {
+	font-size: 1.5em;
+}
 p {
   font-size: 1em;
   line-height: 1.25em;
@@ -239,6 +242,94 @@ header{
     }
   }
 
+/* SERVICES PAGE FLEX BOX STYLES */
+.servicesHeader {
+	width: 90%;
+	margin: 0 auto;
+	padding:0 10px 20px 10px;
+	border-bottom: 2px solid black;
+}
+
+.services{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
+}
+
+	.servicesItem{
+		width: 48%;
+		padding: 2%;
+		border: 1px solid black;
+		background: lightgrey;
+		margin-bottom: 30px;
+	}
+
+		.servicesItem p{
+			font-size: .9em;
+		}
+
+		.servicesItem button {
+			border-radius: 5px;
+			margin: 10px 0;
+		}
+
+.businessFacts {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+	.businessFactsItem{
+		max-width: 50%;
+		padding: 10px;
+	}
+		.businessFactsItem img{
+			width: 100%;
+			height: auto;
+		}
+
+		.businessFactsItem ul li{
+			list-style: square;
+			margin: 3% 0 0 10%;
+		}
+
+@media(max-width:500px){
+	.services{
+		flex-flow: column wrap;
+	}
+
+		.servicesItem{
+			width: 98%;
+			padding: 2%;
+			border: 1px solid black;
+			background: lightgrey;
+			margin-bottom: 30px;
+		}
+
+	.businessFacts {
+		flex-flow: column;
+	}
+		.flexImage {
+			display: none;
+		}
+
+		.businessFactsItem{
+			max-width: 100%;
+		}
+			.businessFactsItem .flexImage img{
+				flex-shrink: 0
+				min-width: 100%;
+				min-height: 100%;
+			}
+}
+/* END SERVICES PAGE SPECIFIC STYLES */
+
+
 #content{
   max-width: 90%;
   margin: 0 auto;
@@ -253,8 +344,6 @@ header{
 		margin-bottom: 20px;
 		padding: 0 10px;
 	}
-
-
 
 	.middle-img{
 		width: 100%;
@@ -294,4 +383,5 @@ footer{
 
 	footer .copyrightInfo{
 		text-align: center;
+		margin-top: 10%;
 	}
