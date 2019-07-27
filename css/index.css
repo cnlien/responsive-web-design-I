@@ -3,64 +3,150 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Your code starts here! */
@@ -73,315 +159,311 @@ h2 {
   font-size: 1em;
 }
 h3 {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 p {
   font-size: 1em;
   line-height: 1.25em;
 }
 
-header{
+header {
   display: flex;
   flex-flow: row wrap;
 }
 
-  nav{
+nav {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#navLinks {
+  display: flex;
+  width: 73%;
+  min-height: 80px;
+  margin-left: 2%;
+  justify-content: flex-start;
+  flex-flow: row no-wrap;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  color: grey;
+  text-decoration: none;
+}
+
+.navigation:hover {
+  text-decoration: underline;
+}
+
+#navLogoContainer {
+  display: flex;
+  margin: 0 2% 0 auto;
+  justify-content: flex-end;
+  width: 23%;
+}
+.navLogo {
+  display: flex;
+  margin: 0 2% 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  nav {
     width: 100%;
-    min-height: 80px;
-    display: flex;
-    flex-flow: row wrap;
     margin-bottom: 20px;
     align-items: center;
     justify-content: flex-start;
+    flex-flow: column-reverse;
   }
 
-    #navLinks{
-      display: flex;
-      width:73%;
-      min-height: 80px;
-      margin-left: 2%;
-      justify-content: flex-start;
-      flex-flow: row no-wrap;
-    }
-      .navigation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:12%;
-        color: grey;
-        text-decoration: none;
-      }
-
-			.navigation:hover{
-				text-decoration: underline;
-			}
-
-    #navLogoContainer{
-      display: flex;
-      margin: 0 2% 0 auto;
-      justify-content: flex-end;
-      width: 23%;
-    }
-      .navLogo{
-        display: flex;
-        margin: 0 2% 0 auto;
-        padding: 0;
-      }
-
-    @media (max-width:800px){
-      nav{
-        width: 100%;
-        margin-bottom: 20px;
-        align-items: center;
-        justify-content: flex-start;
-        flex-flow: column-reverse;
-       }
-
-        #navLinks{
-          width: 100%;
-          margin-left: 0;
-
-        }
-          .navigation{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            color: black;
-          }
-
-        #navLogoContainer{
-          width: 100%;
-          margin: 0;
-          justify-content: flex-start;
-        }
-          .navLogo{
-            margin: 0 auto;
-            padding: 20px;
-          }
-      }
-
-			@media (max-width:500px){
-
-				#navLinks{
-					display: flex;
-					flex-direction: column;
-				}
-				.navigation{
-					display: flex;
-					flex-direction: row;
-					width: 100%;
-					border-bottom: 1px solid grey;
-					height: 60px;
-					font-size: 1.25em;
-					font-weight: bold;
-					color: grey;
-				}
-				.navLogoContainer{
-					border-bottom: 1px solid grey;
-				}
-			}
-
-  #headerBanner{
-    width: 90%;
-    margin: 0 auto;
+  #navLinks {
+    width: 100%;
+    margin-left: 0;
+  }
+  .navigation {
     display: flex;
-    flex-flow: row nowrap;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid black;
-    max-height: 380px;
-  }
-    .headerBannerLeft{
-      display: flex;
-      flex-flow: column;
-      width: 48%;
-      margin: 2%;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .headerBannerRight{
-      width: 48%;
-      display: flex;
-      align-items: center;
-    }
-      .headerBannerRight img{
-        width: 80%;
-        margin: 5% auto;
-        max-width: 380px;
-      }
-
-  button{
-    width: 150px;
-    height: 30px;
-    border: 1px solid black;
-    background: white;
-		font-size: .8em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: black;
   }
 
-		button:hover{
-			background: lightgrey;
-			cursor: pointer;
-		}
-
-		button:active{
-			background: grey;
-			border: 1px solid lightgrey;
-		}
-
-  @media (max-width:800px) {
-
-    .headerBannerRight{
-      display: none;
-    }
-
-    .headerBannerLeft{
-      width: 98%;
-    }
+  #navLogoContainer {
+    width: 100%;
+    margin: 0;
+    justify-content: flex-start;
   }
+  .navLogo {
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  #navLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    height: 60px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: grey;
+  }
+  .navLogoContainer {
+    border-bottom: 1px solid grey;
+  }
+}
+
+#headerBanner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  max-height: 380px;
+}
+.headerBannerLeft {
+  display: flex;
+  flex-flow: column;
+  width: 48%;
+  margin: 2%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.headerBannerRight {
+  width: 48%;
+  display: flex;
+  align-items: center;
+}
+.headerBannerRight img {
+  width: 80%;
+  margin: 5% auto;
+  max-width: 380px;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  background: white;
+  font-size: 0.8em;
+}
+
+button:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+button:active {
+  background: grey;
+  border: 1px solid lightgrey;
+}
+
+@media (max-width: 800px) {
+  .headerBannerRight {
+    display: none;
+  }
+
+  .headerBannerLeft {
+    width: 98%;
+  }
+}
 
 /* SERVICES PAGE FLEX BOX STYLES */
 .servicesHeader {
-	width: 90%;
-	margin: 0 auto;
-	padding:0 10px 20px 10px;
-	border-bottom: 2px solid black;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 10px 20px 10px;
+  border-bottom: 2px solid black;
 }
 
-.services{
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 20px;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	border-bottom: 2px solid black;
+.services {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
 }
 
-	.servicesItem{
-		width: 48%;
-		padding: 2%;
-		border: 1px solid black;
-		background: lightgrey;
-		margin-bottom: 30px;
-	}
+.servicesItem {
+  width: 48%;
+  padding: 2%;
+  border: 1px solid black;
+  background: lightgrey;
+  margin-bottom: 30px;
+}
 
-		.servicesItem p{
-			font-size: .9em;
-		}
+.servicesItem p {
+  font-size: 0.9em;
+}
 
-		.servicesItem button {
-			border-radius: 5px;
-			margin: 10px 0;
-		}
+.servicesItem button {
+  border-radius: 5px;
+  margin: 10px 0;
+}
 
 .businessFacts {
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-	.businessFactsItem{
-		max-width: 50%;
-		padding: 10px;
-	}
-		.businessFactsItem img{
-			width: 100%;
-			height: auto;
-		}
+.businessFactsItem {
+  max-width: 50%;
+  padding: 10px;
+}
+.businessFactsItem img {
+  width: 100%;
+  height: auto;
+}
 
-		.businessFactsItem ul li{
-			list-style: square;
-			margin: 3% 0 0 10%;
-		}
+.businessFactsItem ul li {
+  list-style: square;
+  margin: 3% 0 0 10%;
+}
 
-@media(max-width:500px){
-	.services{
-		flex-flow: column wrap;
-	}
+@media (max-width: 500px) {
+  .services {
+    flex-flow: column wrap;
+  }
 
-		.servicesItem{
-			width: 98%;
-			padding: 2%;
-			border: 1px solid black;
-			background: lightgrey;
-			margin-bottom: 30px;
-		}
+  .servicesItem {
+    width: 98%;
+    padding: 2%;
+    border: 1px solid black;
+    background: lightgrey;
+    margin-bottom: 30px;
+  }
 
-	.businessFacts {
-		flex-flow: column;
-	}
-		.flexImage {
-			display: none;
-		}
+  .businessFacts {
+    flex-flow: column;
+  }
+  .flexImage {
+    display: none;
+  }
 
-		.businessFactsItem{
-			max-width: 100%;
-		}
-			.businessFactsItem .flexImage img{
-				flex-shrink: 0
-				min-width: 100%;
-				min-height: 100%;
-			}
+  .businessFactsItem {
+    max-width: 100%;
+  }
+  .businessFactsItem .flexImage img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 /* END SERVICES PAGE SPECIFIC STYLES */
 
-
-#content{
+#content {
   max-width: 90%;
   margin: 0 auto;
-	border-bottom: 2px solid black;
+  border-bottom: 2px solid black;
 }
-	.twoCol{
-		display: flex;
-		flex-flow: row nowrap;
-	}
-
-	.twoCol > section {
-		margin-bottom: 20px;
-		padding: 0 10px;
-	}
-
-	.middle-img{
-		width: 100%;
-		height: auto;
-		padding: 0 10px;
-		margin-bottom: 20px;
-	}
-
-	.threeCol{
-		display: flex;
-		flex-flow: row nowrap;
-	}
-
-	.threeCol > section {
-		margin-bottom: 20px;
-		padding: 0 10px;
-	}
-
-	@media (max-width:500px){
-		.twoCol {
-			flex-direction: column;
-		}
-		.threeCol{
-			flex-direction: column;
-		}
-	}
-
-footer{
-	width: 90%;
-	margin: 20px auto;
-	display: flex;
-	flex-flow: column nowrap;
+.twoCol {
+  display: flex;
+  flex-flow: row nowrap;
 }
-	footer .contact{
-		margin-bottom: 20px;
-	}
 
-	footer .copyrightInfo{
-		text-align: center;
-		margin-top: 10%;
-	}
+.twoCol > section {
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.middle-img {
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.threeCol {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.threeCol > section {
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+@media (max-width: 500px) {
+  .twoCol {
+    flex-direction: column;
+  }
+  .threeCol {
+    flex-direction: column;
+  }
+}
+
+footer {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+footer .contact {
+  margin-bottom: 20px;
+}
+
+footer .copyrightInfo {
+  text-align: center;
+  margin-top: 10%;
+}
